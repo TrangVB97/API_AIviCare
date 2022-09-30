@@ -1,0 +1,20 @@
+{
+  "couponCode": "couponTamLy2809",
+  "discountType": "AMOUNT",
+  "amountOff": "30000",
+  "percentOff": 0,
+  "totalIssuedCoupon": "50",
+  "timesForEachCoupon": 1,
+  "endDate": 1664505900000,
+  "startDate": 1663728300000,
+  "couponType": "PACKAGE",
+  "couponMode": "PUBLIC",
+  "providerCriteria": {
+    "packages": [
+      {
+        "code": "GB-CON-85959",
+        "name": "Chuyên khoa tâm lý"
+      }
+    ]
+  }
+}
