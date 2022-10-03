@@ -2,6 +2,14 @@
 Documentation    Verify Search Coupon.
 Resource    ../../BasePage.robot
 Resource    ../../Resources/CouponService/CouponResource.robot
+Suite Setup    Connect to Database  psycopg2  ${dbName}  ${dbUsername}  ${dbPassword}  ${dbHost}  ${dbPort}
+
+*** Variables ***
+${dbName}    promotion-service
+${dbHost}    vbmda-val.postgres.database.azure.com
+${dbPort}     5432
+${dbUsername}    promotion-service@vbmda-val
+${dbPassword}    XC5Fr8sryRn4B9j5TrtU
 
 *** Test Cases ***
 Search Coupon With Blank Code Coupon
@@ -10,12 +18,21 @@ Search Coupon With Blank Code Coupon
     ${response}=    Get Coupon By Keyword
     ${total}=   set variable    ${response.json()}[total]
 
+    @{result}=   Query   SELECT Count(*) FROM coupon
+    ${column 1}    Evaluate    [x[0] for x in $result]
+    should be equal as integers   ${total}  ${column 1}[0]
+
 Search Coupon With Existing Code Coupon
     [Documentation]   Return coupons contain code coupon.
     ...    check 'couponCode' key contain 'coupon2209' value.
     [Tags]    existing
     ${response}=    Get Coupon By Keyword   keyword=coupon2209
     ${total}=   set variable    ${response.json()}[total]
+
+    @{result}=  Query    select count(*) from coupon where coupon_code like '%coupon2209%'
+    ${column 1}     evaluate    [x[0] for x in $result]
+    should be equal as integers    ${total}  ${column 1}[0]
+
     ${total}=   evaluate    ${total} - 1
     FOR    ${i}    IN    0    ${total}
         should contain    ${response.json()}[coupons][${i}][couponCode]     coupon2209

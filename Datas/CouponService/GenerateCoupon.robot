@@ -31,3 +31,7 @@ Create Coupon Data
                   ...  startDate=${startDate}    endDate=${endDate}
     ${req_json}=    Json.Dumps    ${req_dict}
     [Return]   ${couponCode}  ${req_json}
+
+Generate Promotion Data
+    [Arguments]
+    [Return]
