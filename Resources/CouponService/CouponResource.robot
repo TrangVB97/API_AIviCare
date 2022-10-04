@@ -102,9 +102,11 @@ Create Promotion Data Format
     [Arguments]   ${json_file}  ${expected_status}=None
     ${root}     Get CUDIR
     ${url}=      Get URL Coupon Service
-    ${header}=  Create Dictionary   Content-Type=multipart/form-data   Authorization=${authorization}
+    ${header}=  Create Dictionary   Content-Type=multipart/form-data; boundary=--------------------------893853995866210723764561  Authorization=${authorization}
     ${data}=    Load JSON From File    ${root}/Datas/CouponService/${json_file}.json
-    ${form_data}=   evaluate    {'data=': (${data})}
+    ${form_data}=   evaluate    {'data': (str(${data}))}
+#    log to console    ${form_data}
     Create Session  createPromotion  ${url}/promotions  headers=${header}    verify=True
-    ${response}=  POST On Session  createPromotion  url=${url}/promotions   data=${data}  headers=${header}   expected_status=${expected_status}
+    ${response}=  POST On Session  createPromotion  url=${url}/promotions   data=${form_data}
+                ...    headers=${header}   expected_status=${expected_status}
     [Return]    ${response}

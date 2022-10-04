@@ -1,67 +1,67 @@
 {
-        "name": "04101023",
-        "description": "Tang voucher tri gia 1 trieu",
-        "userManual": "Kham online",
-        "referencePrice": "Tam 500k - 1tr",
-        "startDate": "2022-10-03T09:04:00.000Z",
-        "endDate": "2022-10-12T09:20:00.000Z",
-        "patientSources": [
-            "NONE"
-        ],
-        "couponTemplates": [
-            {
-                "couponCode": "AIviCare123",
-                "campaignName": "",
-                "discountType": "PERCENTAGE",
-                "amountOff": null,
-                "percentOff": "50",
-                "minimumSpending": "",
-                "maximumDiscountAmount": null,
-                "totalNumberOfCoupon": null,
-                "totalIssuedCoupon": 5,
-                "timesForEachCoupon": 1,
-                "endDate": null,
-                "startDate": null,
-                "couponType": "APPOINTMENT",
-                "couponMode": "OFFLINE",
-                "countryCode": null,
-                "providerCriteria": {
-                    "organizations": [
-                        {
-                            "code": "BVTNHN",
-                            "name": "Bệnh viện Thanh Nhàn",
-                            "state": "Số 42 Phố Thanh Nhàn, Phường Thanh Nhàn, Quận Hai Bà Trưng, Hà Nội, VN"
-                        }
-                    ],
-                    "specialties": [
-                        {
-                            "code": "SP002",
-                            "name": "Da liễu"
-                        }
-                    ],
-                    "packages": [],
-                    "patientSources": [
-                        "NONE"
-                    ]
-                },
-                "description": "Hello",
-                "expDuration": 2592000000,
-                "userManual": "Mang theo ma voucher den phong kham",
-                "referencePrice": "Tam 1tr - 1.5tr"
-            }
-        ],
-        "couponCreateOrder": "BY_ONE",
+  "name": "coupon04101754",
+  "description": "Tang voucher tri gia 1 trieu",
+  "userManual": "Kham online",
+  "referencePrice": "Tam 500k - 1tr",
+  "startDate": "2022-10-03T09:04:00.000Z",
+  "endDate": "2022-10-12T09:20:00.000Z",
+  "patientSources": [
+    "NONE"
+  ],
+  "couponTemplates": [
+    {
+      "couponCode": "AIviCare123",
+      "campaignName": "",
+      "discountType": "PERCENTAGE",
+      "amountOff": null,
+      "percentOff": "50",
+      "minimumSpending": "",
+      "maximumDiscountAmount": null,
+      "totalNumberOfCoupon": null,
+      "totalIssuedCoupon": 5,
+      "timesForEachCoupon": 1,
+      "endDate": null,
+      "startDate": null,
+      "couponType": "APPOINTMENT",
+      "couponMode": "OFFLINE",
+      "countryCode": null,
+      "providerCriteria": {
         "organizations": [
-            {
-                "code": "BVTNHN",
-                "name": "Bệnh viện Thanh Nhàn",
-                "state": "Số 42 Phố Thanh Nhàn, Phường Thanh Nhàn, Quận Hai Bà Trưng, Hà Nội, VN"
-            }
+          {
+            "code": "BVTNHN",
+            "name": "Bệnh viện Thanh Nhàn",
+            "state": "Số 42 Phố Thanh Nhàn, Phường Thanh Nhàn, Quận Hai Bà Trưng, Hà Nội, VN"
+          }
         ],
         "specialties": [
-            {
-                "code": "SP002",
-                "name": "Da liễu"
-            }
+          {
+            "code": "SP002",
+            "name": "Da liễu"
+          }
+        ],
+        "packages": [],
+        "patientSources": [
+          "NONE"
         ]
+      },
+      "description": "Hello",
+      "expDuration": 2592000000,
+      "userManual": "Mang theo ma voucher den phong kham",
+      "referencePrice": "Tam 1tr - 1.5tr"
     }
+  ],
+  "couponCreateOrder": "BY_ONE",
+  "organizations": [
+    {
+      "code": "BVTNHN",
+      "name": "Bệnh viện Thanh Nhàn",
+      "state": "Số 42 Phố Thanh Nhàn, Phường Thanh Nhàn, Quận Hai Bà Trưng, Hà Nội, VN"
+    }
+  ],
+  "specialties": [
+    {
+      "code": "SP002",
+      "name": "Da liễu"
+    }
+  ]
+}
