@@ -6,6 +6,7 @@ Resource    ../../Datas/CouponService/GenerateCoupon.robot
 Test Setup    Sleep    1
 
 *** Test Cases ***
+/test1
 Create Empty Code Coupon
     [Documentation]    Not allow to create coupon with empty code coupon.
     [Tags]    empty_code
